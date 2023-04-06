@@ -4,10 +4,10 @@ def split_and_mul(line):
     nf = float(nf_s)
     return ni * nf
 
-def combine_numbers_and_names():
-    with open("numbers.txt", "r") as f1:
-        with open("names.txt", "r") as f2:
-            with open("result.txt", "w+") as f:
+def combine_numbers_and_names(numbers_filename, names_filename, result_filename):
+    with open(numbers_filename, "r") as f1:
+        with open(names_filename, "r") as f2:
+            with open(result_filename, "w+") as f:
                 len1 = len(f1.readlines())
                 len2 = len(f2.readlines())
 
@@ -34,4 +34,4 @@ def combine_numbers_and_names():
 
 
 if __name__ == "__main__":
-    combine_numbers_and_names()
+    combine_numbers_and_names("numbers.txt", "names.txt", "result.txt")

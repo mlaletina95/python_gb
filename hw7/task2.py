@@ -11,6 +11,11 @@ def generate_name():
     s = s.capitalize()
     return s
 
-with open("names.txt", "a+") as f:
-    f.write(generate_name())
-    f.write("\n")
+def write_random_names(filename):
+    with open(filename, "a+") as f:
+        f.write(generate_name())
+        f.write("\n")
+
+
+if __name__ == "__main__":
+    write_random_names("names.txt")
